@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'create_post' %}">Create New Post</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        <h1>Blog Posts</h1>
+        <ul class="blog-list">
+            {% for post in posts %}
+                <li>
+                    <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+                    <p>Published on: {{ post.published_date }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

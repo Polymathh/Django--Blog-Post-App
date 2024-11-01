@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'create_post' %}">Create New Post</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        <h1>Create New Blog Post</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+
+            <input type="submit" value="Create Post">
+        </form>
+        <a href="{% url 'home' %}" class="back-button">Back to Home</a>
+
+    </div>
+</body>
+</html>

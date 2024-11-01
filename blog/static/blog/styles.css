@@ -1,0 +1,132 @@
+/* blog/static/blog/styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e92882;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #300eaa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #96e01f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: right;
+}
+
+.navbar a {
+    color: #550ddb;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Blog List */
+.blog-list li {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-list li:hover {
+    transform: scale(1.02);
+}
+
+.blog-list a {
+    font-size: 1.5em;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.blog-list a:hover {
+    color: #d9534f;
+}
+
+/* Post Detail */
+.post-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* blog/static/blog/styles.css */
+
+/* Form Styles */
+form {
+    background-color: #12089c;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 10px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+form input[type="text"],
+form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* blog/static/blog/styles.css */
+
+/* Back Button Styles */
+.back-button {
+    display: inline-block;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px; /* Space from the form */
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
